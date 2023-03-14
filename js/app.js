@@ -24,7 +24,6 @@
 */
 document.addEventListener('DOMContentLoaded', navBar); 
 document.addEventListener('DOMContentLoaded', makeActive); 
-
 const sections = document.querySelectorAll('section');
 
 

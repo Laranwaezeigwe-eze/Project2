@@ -1,4 +1,3 @@
-# Project2
 # Landing Page Project
 This is a Landing Page Project effected with DOM Manipulation using Javascript.
 
