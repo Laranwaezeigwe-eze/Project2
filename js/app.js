@@ -78,6 +78,20 @@ sections.forEach((section)=>{
 	});
 });
 
+// Highlight the navigation bar when a section is active
+const navLink = document.querySelectorAll('#navbar__list a')
+navLink.forEach((link) => {
+		link.addEventListener('click', () => {	
+			// Remove active class from all links
+			navLink.forEach((link) => {
+				link.classList.remove('active');
+			});		
+			// Add active class to a clicked link
+		link.classList.add('active');
+	});
+});
+
+
 // Scroll to anchor using scrollIntoView method
 // select the navigation link
 const menuLinks = document.querySelectorAll('#navbar__list a');
@@ -91,7 +105,8 @@ menuLinks.forEach((menuLink) =>{
 		// use scrollIntoView() to scroll to target section using smooth scrolling behavior
 		section.scrollIntoView({behavior: 'smooth'});
 	});
-})
+});
+
 
 // Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
 const scrollup = document.getElementById('scrollUp');

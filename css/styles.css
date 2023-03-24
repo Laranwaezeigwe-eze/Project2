@@ -79,8 +79,7 @@ section {
 }
 
 #navbar__list li.active{
-	background-color:#ac7d0e;
-    background: #353c51;
+	background-color:#181817;
 }
 
 #navbar__list a:hover {
@@ -91,13 +90,11 @@ a {
 	text-decoration: none;
 }
 
+/* Active class on Navigation bar */
 .active{
-    display: block;
-    background: #353c51;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    color: rgb(201, 20, 162) !important;
+    background-color: #0f2975;
+    padding: 10px;
+    color: rgb(233, 224, 231) !important;
 }
 
 /* Header Styles */
