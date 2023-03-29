@@ -91,6 +91,31 @@ navLink.forEach((link) => {
 	});
 });
 
+// Make active sections highlight on scroll
+// Add an event listener to the window object for scroll events
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  let currentScroll = window.pageYOffset;
+  
+  // Loop through all the sections
+  sections.forEach(section => {
+    // Get the position and height of the section
+    let sectionTop = section.offsetTop - 50;
+    let sectionHeight = section.offsetHeight;
+    
+    // Check if the current scroll position is inside the section
+    if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+      // Add the active class to the corresponding navigation item
+      let navItem = document.querySelector(`[data-nav="${section.getAttribute('data-nav')}"]`);
+      navItem.classList.add('active');
+    } else {
+      // Remove the active class from navigation items that are not in view
+      let navItem = document.querySelector(`[data-nav="${section.getAttribute('data-nav')}"]`);
+      navItem.classList.remove('active');
+    }
+  });
+});
+
 
 // Scroll to anchor using scrollIntoView method
 // select the navigation link
@@ -106,7 +131,6 @@ menuLinks.forEach((menuLink) =>{
 		section.scrollIntoView({behavior: 'smooth'});
 	});
 });
-
 
 // Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
 const scrollup = document.getElementById('scrollUp');
